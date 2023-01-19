@@ -1,3 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/gt-walsheim');
+
+* {
+    font-family: 'GT Walsheim', sans-serif;
+}
+
 body {
     background: #f60;
 }
