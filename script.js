@@ -1,4 +1,8 @@
-gsap.to("h1", {
-    x: "300",
-    duration: "3"
-})
+gsap.defaults({ duration: 1 });
+
+gsap.to(".rocket", {
+  y: "100",
+  fill: "green",
+  stagger: 1,
+  borderRadius: "300",
+});
