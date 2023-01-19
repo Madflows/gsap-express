@@ -1,16 +1,33 @@
+const play = document.getElementById('play');
+const pause = document.getElementById('pause');
+const reverse = document.getElementById('reverse');
+
+
 gsap.defaults({ duration: 1, ease: "linear" });
 
 
-gsap.to(".rocket", {
+var tween = gsap.to(".rocket", {
     repeat: -1,
     yoyo: true,
     y: "100",
     borderRadius: 30,
     stagger: {
         each: 0.2,
-        from: "center"
+        from: "edges"
     }
 })
+
+play.addEventListener('click', () => {
+    tween.play()
+})
+pause.addEventListener('click', () => {
+    tween.pause()
+})
+reverse.addEventListener('click', () => {
+    tween.reverse()
+})
+
+
 
 
 // Yoyo: repeat: -1 makes it loop

@@ -18,3 +18,13 @@ body {
     display: grid;
     place-items: center;
 }
+
+
+.btn {
+    background: #020208;
+    border-radius: 5px;
+    padding: .2rem .5rem;
+    color: #f60;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
