@@ -46,30 +46,6 @@ animation
 
 
 
-/*
-===== Controlled Tweens =====
-
-var tween = gsap.to(".rocket", {
-    repeat: -1,
-    yoyo: true,
-    yPercent: "100",
-    borderRadius: 30,
-    stagger: {
-        each: 0.2,
-        from: "edges"
-    }
-})
-
-play.addEventListener('click', () => {
-    tween.play()
-})
-pause.addEventListener('click', () => {
-    tween.pause()
-})
-reverse.addEventListener('click', () => {
-    tween.reverse()
-})
-*/
 
 
 
