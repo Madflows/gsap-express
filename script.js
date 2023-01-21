@@ -1,14 +1,3 @@
-const play = document.getElementById('play');
-const pause = document.getElementById('pause');
-const reverse = document.getElementById('reverse');
-
-
-gsap.defaults({ duration: 1, ease: "linear" });
-
-
-
-let animation = gsap.timeline();
-
 // ===== Timelines =====
 /* DEMO 
 let animation = gsap.timeline();
@@ -18,6 +7,11 @@ animation
   .from("#freds img", {y:160, stagger:0.1, duration:0.8, ease:"back"})
   .from("#time", {xPercent:100, duration:0.2})
 */
+
+gsap.defaults({ duration: 1, ease: "linear" });
+
+let animation = gsap.timeline();
+
 animation
   .from(".slide-bg", { xPercent: "100", duration: "0.8" })
   .to(".slide-bg", { xPercent: "-100", duration: "0.8" }, "+=1")
@@ -42,34 +36,3 @@ animation
     },
     "<"
   );
-
-
-
-
-
-
-
-
-// Yoyo: repeat: -1 makes it loop
-/* gsap.to(".rocket", {
-    repeat: -1,
-    yoyo: true,
-    stagger: 1,
-    borderRadius: 100,
-    y: "100"
-}) */
-
-
-// From To
-// gsap.fromTo(
-//   ".rocket",
-//   {
-//     y: "100",
-//     borderRadius: "300",
-//   },
-//   {
-//     y: 0,
-//     stagger: 1,
-//     borderRadius: "10",
-//   }
-// );
