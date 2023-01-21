@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/gt-walsheim');
+@import url('https://fonts.cdnfonts.com/css/raleway-5');
 
 * {
     padding: 0;
@@ -8,7 +9,7 @@
 }
 
 body {
-    background-color: #f60;
+    background-color: #000008;
     overflow-x: hidden;
 }
 
@@ -47,4 +48,8 @@ body {
 
 .wrapper {
     padding: 5rem 0rem;
+}
+
+.text {
+    font-family: 'Raleway', sans-serif;
 }
