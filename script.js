@@ -26,13 +26,4 @@ animation
       yoyo: true,
     },
     "+=1"
-  )
-  .from(
-    ".btn-group",
-    {
-      opacity: 0,
-      scaleX: 0,
-      duration: "0.4",
-    },
-    "<"
   );
