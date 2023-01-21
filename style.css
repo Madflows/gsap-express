@@ -1,13 +1,28 @@
 @import url('https://fonts.cdnfonts.com/css/gt-walsheim');
 
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'GT Walsheim', sans-serif;
 }
 
 body {
-    background: #f60;
+    background-color: #f60;
+    overflow-x: hidden;
 }
 
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #020208;
+}
 
 .rocket {
     background: white;
@@ -30,3 +45,6 @@ body {
 }
 
 
+.wrapper {
+    padding: 5rem 0rem;
+}
