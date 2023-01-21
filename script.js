@@ -6,10 +6,17 @@ const reverse = document.getElementById('reverse');
 gsap.defaults({ duration: 1, ease: "linear" });
 
 
+// ===== Timelines =====
+
+
+
+/*
+===== Controlled Tweens =====
+
 var tween = gsap.to(".rocket", {
     repeat: -1,
     yoyo: true,
-    y: "100",
+    yPercent: "100",
     borderRadius: 30,
     stagger: {
         each: 0.2,
@@ -26,6 +33,7 @@ pause.addEventListener('click', () => {
 reverse.addEventListener('click', () => {
     tween.reverse()
 })
+*/
 
 
 
