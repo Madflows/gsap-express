@@ -1,7 +1,16 @@
-const play = document.getElementById('play');
-const pause = document.getElementById('pause');
-const reverse = document.getElementById('reverse');
+gsap.registerPlugin(TextPlugin)
+gsap.defaults({ duration: 3, ease: "power1.in"});
 
+let animation = gsap.timeline();
 
-gsap.defaults({ duration: 1, ease: "easeInOut" });
-
+animation
+  .to("h2", {
+    text: "Code Designer",
+    repeat: "1",
+    yoyo: true,
+  })
+  .to("h2", {
+    text: "Folarin Lawal",
+    repeat: "1",
+    yoyo: true,
+  });
