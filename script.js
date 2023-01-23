@@ -1,6 +1,7 @@
-gsap.defaults({ duration: 1, ease: "easeInOut" });
+gsap.defaults({ duration: .5, ease: "sine.in" });
 
-const animation = gsap.timeline({defaults: {opacity: 0}});
+// const animation = gsap.timeline({defaults: {scale: 0}});
+const animation = gsap.timeline({});
 
 animation
     .from(".slide-bg", {
