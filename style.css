@@ -1,34 +1,60 @@
-@import url('https://fonts.cdnfonts.com/css/gt-walsheim');
+@import url("https://fonts.cdnfonts.com/css/gt-walsheim");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'GT Walsheim', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "GT Walsheim", sans-serif;
 }
 
 body {
-    background-color: #f60;
-    overflow-x: hidden;
+  background: #fff;
 }
 
 .wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    padding: 5rem 0rem;
+  padding: 5rem 0rem;
 }
 
 .card {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    font-weight: bold;
-    user-select: none;
-    visibility: hidden;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+  visibility: hidden;
+}
+
+.card p {
+  visibility: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+section:nth-child(even) {
+  background: lightyellow;
+}
+
+section h2 {
+  font-size: 6rem;
+  font-weight: bold;
+  filter: invert(1);
+  mix-blend-mode: difference;
+  line-height: normal;
+  transform: translateY(6rem);
+}
+
+section span {
+  overflow-y: hidden;
 }
