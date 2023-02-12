@@ -1,4 +1,8 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+
 gsap.defaults({ duration: .3, ease: "easeInOut" });
+
+
 
 ScrollSmoother.create({
   smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
@@ -49,9 +53,9 @@ cardTL
       scrollTrigger: {
         trigger: ".card p",
         scrub: true,
-        markers: true,
+        // markers: true,
         start: "top center",
-        end: "center center-=20%",
+        end: "center center-=10%",
       },
     },
     "-=.3"
@@ -67,10 +71,12 @@ headings.forEach((heading) => {
     duration: 1,
     scrollTrigger: {
       trigger: heading,
-      // markers: true,
+      markers: true,
       scrub: true,
       // Trigger scoller
-      start: "top 80%"
+      start: "top 80%",
+      end: "bottom center",
+      // pin: true
     },
   })
 })

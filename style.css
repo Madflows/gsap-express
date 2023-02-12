@@ -45,6 +45,9 @@ section {
 section:nth-child(even) {
   background: lightyellow;
 }
+section:nth-child(odd) {
+  background: lightcyan;
+}
 
 section h2 {
   font-size: 4rem;
