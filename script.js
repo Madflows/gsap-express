@@ -70,11 +70,11 @@ headings.forEach((heading) => {
     scrollTrigger: {
       trigger: heading,
       // markers: true,
-      // scrub: true,
+      scrub: true,
       // Trigger scoller
       start: "top 80%",
       end: "bottom 20%",
-      toggleActions: "restart pause reverse reverse",
+      // toggleActions: "restart pause reverse reverse",
       // pin: true
     },
   });
@@ -82,14 +82,15 @@ headings.forEach((heading) => {
 
 let deployCon = document.querySelector(".deploy");
 
+
 ScrollTrigger.create({
-  trigger: deployCon,
-  pin: true,
-  // scrub: true,
-  // markers: true,
-  start: "top top",
-  end: "bottom+=400% top",
-});
+    trigger: deployCon,
+    pin: true,
+    // scrub: true,
+    // markers: true,
+    start: "top top",
+    end: "bottom+=400% top",
+  });
 
 
 let features = document.querySelectorAll(".feature-card");
