@@ -1,9 +1,9 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 gsap.defaults({ duration: 0.3, ease: "easeInOut" });
 
 ScrollSmoother.create({
-  smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+  smooth: 3, // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true, // looks for data-speed and data-lag attributes on elements
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
@@ -81,17 +81,35 @@ headings.forEach((heading) => {
 });
 
 let deployCon = document.querySelector(".deploy");
+let deployWrapper = document.querySelector(".deploy-wrapper");
+let codeAfter = CSSRulePlugin.getRule('.code-wrapper:before')
 
+let mySplitText = new SplitText(".deploy", { type: "words,chars,lines" });
+
+console.log(mySplitText.words);
+console.log(mySplitText.lines);
+
+let textTL = gsap.timeline().from(mySplitText.words, {
+  stagger: 0.05,
+  yPercent: -100,
+  opacity: 0
+}).from(codeAfter, {
+  width: "500%",
+  margin: "0px auto",
+  left: "-90%",
+  top: "100%",
+}, "<=2");
 
 ScrollTrigger.create({
-    trigger: deployCon,
-    pin: true,
-    // scrub: true,
-    // markers: true,
-    start: "top top",
-    end: "bottom+=400% top",
-  });
-
+  trigger: deployCon,
+  pin: true,
+  animation: textTL,
+  pinSpacing: true,
+  scrub: true,
+  markers: true,
+  start: "top top",
+  end: "+=800px",
+});
 
 let features = document.querySelectorAll(".feature-card");
 
@@ -102,8 +120,8 @@ features.forEach((card) => {
     scrollTrigger: {
       trigger: card,
       scrub: 1,
-      markers: true,
+      // markers: true,
       start: "top center",
     },
   });
-})
+});
