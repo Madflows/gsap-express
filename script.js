@@ -1,11 +1,9 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-gsap.defaults({ duration: .3, ease: "easeInOut" });
-
-
+gsap.defaults({ duration: 0.3, ease: "easeInOut" });
 
 ScrollSmoother.create({
-  smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+  smooth: -2, // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true, // looks for data-speed and data-lag attributes on elements
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 });
@@ -71,12 +69,40 @@ headings.forEach((heading) => {
     duration: 1,
     scrollTrigger: {
       trigger: heading,
-      markers: true,
-      scrub: true,
+      // markers: true,
+      // scrub: true,
       // Trigger scoller
       start: "top 80%",
-      end: "bottom center",
+      end: "bottom 20%",
+      toggleActions: "restart pause reverse reverse",
       // pin: true
     },
-  })
+  });
+});
+
+let deployCon = document.querySelector(".deploy");
+
+ScrollTrigger.create({
+  trigger: deployCon,
+  pin: true,
+  // scrub: true,
+  // markers: true,
+  start: "top top",
+  end: "bottom+=400% top",
+});
+
+
+let features = document.querySelectorAll(".feature-card");
+
+features.forEach((card) => {
+  gsap.from(card, {
+    x: 30,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: card,
+      scrub: true,
+      markers: true,
+      start: "top center",
+    },
+  });
 })
