@@ -65,9 +65,24 @@
 
         <!--- ALL YOUR CONTENT HERE --->
         <div
-          class="wrapper min-h-[80dvh] flex flex-col pt-[10dvh] gap-[5rem] items-center justify-center"
+          class="wrapper min-h-[80dvh] relative flex flex-col pt-[10dvh] gap-[5rem] items-center  justify-center"
         >
-          <div class="mx-auto p-4 max-w-lg md:text-center">
+          <div class="bread-container"></div>
+          <svg
+            class="w-14 h-14 absolute bottom-10 text-slate-600 left-10"
+            viewBox="0 0 104 73"
+            fill="none"
+            data-speed="0.5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M57.1576 7.44863C53.831 5.16772 51.182 3.5966 47.193 3.21034C43.8401 2.88567 40.4399 2.98776 37.104 3.43439C27.4742 4.72371 18.5278 10.1981 11.7423 16.9887C4.51029 24.226 -0.0601712 34.0308 0.892389 44.4084C2.03799 56.8891 11.2616 65.8317 22.6653 69.7276C37.5325 74.8068 55.3079 71.9896 69.5261 65.9911C82.4612 60.534 98.1688 50.2841 102.471 35.9373C106.219 23.4392 95.872 11.7376 85.8562 5.97051C77.5557 1.19116 67.8156 -0.854239 58.4918 2.0932C51.6146 4.26724 44.7193 7.80313 39.1564 12.4182C32.891 17.616 28.6773 24.2755 24.1785 30.9319"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <div class="mx-auto p-4 max-w-xl md:text-center">
             <h2
               class="text-4xl md:text-7xl font-bold text-gray-900 md:text-3xl"
             >
@@ -92,20 +107,38 @@
               <p>3</p>
             </div>
           </div>
+
+          <div data-lag="0.1" class="relative">
+            <button class="bg-slate-900 bread-btn py-3 px-5 rounded-lg text-white text-lg active:scale-95 hover:scale-105 transition-all">Click for bread</button>
+
+            <svg
+              class="w-10 h-10 text-slate-600 absolute top-14"
+              viewBox="0 0 69 90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.563538 86.4441C9.62047 89.2172 16.6734 91.0373 25.3582 87.062C32.131 83.9619 38.9967 80.1472 44.485 75.0561C50.4537 69.5194 57.9022 61.3399 53.1364 53.1378C49.3227 46.5744 43.2597 40.2549 43.2597 32.3089C43.2597 23.5235 48.7541 18.3068 54.9775 12.9941C58.6952 9.82034 63.0893 5.84965 65.693 1.65486C66.8291 -0.175672 57.9801 2.37935 56.7613 2.69535C56.4809 2.76805 57.7534 3.40302 58.0609 3.80379C59.7892 6.05612 60.7498 8.83608 62.4864 11.1169C66.0039 15.7368 66.9283 3.54324 68.4493 1.40005"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <section bg="white">
+        <!-- <section bg="white">
           <span>
             <h2>Another section</h2>
           </span>
-        </section>
-        <section class="bg-white py-24 sm:py-32 feature-section">
+        </section> -->
+        <section class="bg-slate-100 py-24 sm:py-32 feature-section">
           <div class="h-[5rem]"></div>
 
           <div
-            class="mx-auto grid max-w-5xl grid-cols-1 deploy-wrapper items-start gap-10 px-6 md:grid-cols-2 lg:px-8"
+            class="mx-auto section-2 grid max-w-5xl grid-cols-1 deploy-wrapper items-start gap-10 px-6 md:grid-cols-2 lg:px-8"
           >
             <div
-              class="flex deploy py-[2rem]  w-full flex-col items-center justify-center md:w-[28rem]"
+              class="flex deploy py-[2rem] w-full flex-col items-center justify-center md:w-[28rem]"
             >
               <div class="flex flex-wrap">
                 <h3
@@ -119,11 +152,16 @@
                   Look at me, I got pinned !
                 </p>
                 <p class="mt-6 mb-2 text-base leading-7 text-gray-600">
-                  Just add <code class="px-2 w-full code-wrapper py-1 relative rounded-lg">pin: true</code> to your <span class="font-medium">ScrollTrigger</span> config
+                  Just add
+                  <code
+                    class="px-2 w-full code-wrapper py-1 relative rounded-lg"
+                    >pin: true</code
+                  >
+                  to your <span class="font-medium">ScrollTrigger</span> config
                 </p>
               </div>
             </div>
-            <div class="mt-5 w-full min-w-0  flex-1 md:mt-0">
+            <div class="mt-5 w-full min-w-0 flex-1 md:mt-0">
               <dl
                 class="grid grid-cols-1 gap-y-10 gap-x-8 md:max-w-xl lg:max-w-none lg:gap-y-16"
               >
@@ -142,6 +180,18 @@
                 <div
                   class="feature-card h-[200px] w-full max-w-sm rounded-lg bg-gray-200 border border-gray-300 p-10"
                 ></div>
+                <div
+                  class="feature-card h-[200px] w-full max-w-sm rounded-lg bg-gray-200 border border-gray-300 p-10"
+                ></div>
+                <div
+                  class="feature-card h-[200px] w-full max-w-sm rounded-lg bg-gray-200 border border-gray-300 p-10"
+                ></div>
+                <div
+                  class="feature-card h-[200px] w-full max-w-sm rounded-lg bg-gray-200 border border-gray-300 p-10"
+                ></div>
+                <div
+                  class="feature-card h-[200px] w-full max-w-sm rounded-lg bg-gray-200 border border-gray-300 p-10"
+                ></div>
               </dl>
             </div>
           </div>
@@ -153,7 +203,7 @@
         </section>
 
         <!-- Footer -->
-        <footer aria-label="Site Footer" class="bg-white pb-[3rem]">
+        <footer aria-label="Site Footer" class="bg-white pb-[5rem]">
           <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
             <div class="sm:flex sm:items-center sm:justify-between">
               <div class="flex justify-center text-teal-600 sm:justify-start">
@@ -169,7 +219,7 @@
               <p
                 class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right"
               >
-                Copyright &copy; 2022. All rights reserved.
+                Copyright &copy; 2023. All rights reserved.
               </p>
             </div>
           </div>
